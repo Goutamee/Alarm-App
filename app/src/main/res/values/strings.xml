@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">AlarmApp</string>
+
+    <string-array name="days_abbreviated">
+        <item>M</item>
+        <item>Tu</item>
+        <item>W</item>
+        <item>Th</item>
+        <item>F</item>
+        <item>Sa</item>
+        <item>Su</item>
+    </string-array>
+
+    <!-- Main Activity/Fragment -->
+    <string name="empty_view_text">Press the Floating Action Button to add an alarm!</string>
+
+    <!-- Edit Alarm Activity/Fragment -->
+    <string name="time">Time:</string>
+    <string name="label">Label:</string>
+    <string name="days">Days</string>
+    <string name="edit_alarm">Edit Alarm</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="add_label_hint">Add a label!</string>
+    <string name="update_complete">Changes Saved</string>
+    <string name="update_failed">Update Failed</string>
+    <string name="delete_complete">Alarm Deleted</string>
+    <string name="delete_failed">Delete Failed</string>
+    <string name="delete_dialog_title">Confirm Delete Alarm</string>
+    <string name="delete_dialog_content">Are you sure you would like to delete this alarm?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Edit Alarm Menu -->
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+
+    <!-- Alarm Landing Page Activity/Fragment -->
+    <string name="launch_main_activity">Launch Main Activity</string>
+    <string name="dismiss">Dismiss</string>
+
+    <!-- Days -->
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+
+    <!-- Notification -->
+    <string name="channel_name">Simple Alarms</string>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="list_padding_vertical_small">8dp</dimen>
+
+    <dimen name="fab_margin_default">16dp</dimen>
+</resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:scrollbarStyle="outsideOverlay">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAlarmName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_padding_vertical_small"
+            android:text="Name:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Label" />
+
+
+        <EditText
+            android:id="@+id/edit_alarm_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="Add Alarm Name"
+            android:inputType="textCapWords"
+            android:maxLength="15"
+            android:textColor="@color/secondary_text"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvAlarmName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_padding_vertical_small"
+            android:text="@string/time"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlarmName"
+            tools:text="Time" />
+
+
+        <TimePicker
+            android:id="@+id/edit_alarm_time_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlarmName"
+            tools:targetApi="lollipop" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSnooze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snooze  "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_alarm_time_picker" />
+
+        <TextView
+            android:id="@+id/tvDaysLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_padding_vertical_small"
+            android:text="@string/days"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchSnooze"
+            tools:text="Days" />
+
+        <LinearLayout
+            android:id="@+id/llDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDaysLabel">
+
+            <CheckBox
+                android:id="@+id/edit_alarm_mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_padding_vertical_small"
+                android:gravity="center"
+                android:text="M"
+                />
+
+            <CheckBox
+                android:id="@+id/edit_alarm_tues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_padding_vertical_small"
+                android:gravity="center"
+                android:text="T"
+                />
+
+            <CheckBox
+                android:id="@+id/edit_alarm_wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_padding_vertical_small"
+                android:gravity="center"
+                android:text="W"
+                />
+
+            <CheckBox
+                android:id="@+id/edit_alarm_thurs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_padding_vertical_small"
+                android:gravity="center"
+                android:text="T"
+                />
+
+            <CheckBox
+                android:id="@+id/edit_alarm_fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/list_padding_vertical_small"
+                android:gravity="center"
+                android:text="F"
+                />
+
+            <CheckBox
+                android:id="@+id/edit_alarm_sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"
+                android:text="S"
+                />
+
+            <CheckBox
+                android:id="@+id/edit_alarm_sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"
+                android:text="S"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llButtonBar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llDays">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
